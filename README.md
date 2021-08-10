@@ -7,6 +7,8 @@ It will authenticate the device against the SnowShoe API and return a success or
 
 ## Getting started
 
+### Step 1: Get the library
+
 Add the library to your project's pubspec.yaml file (then update your deps with `dart pub get`):
 
 ```
@@ -14,6 +16,8 @@ dependencies:
   snowshoe_sdk_flutter:
     git: https://github.com/snowshoestamp/snowshoe-flutter-sdk.git
 ```
+
+### Step 2: Create a tappable page
 
 In your app, use the `SnowShoeView` class to create a tappable area, then override the `onStampResult` method with
 custom logic, to handle the SnowShoe API response, that is appropriate for your app:
@@ -73,6 +77,8 @@ class _MyHomePageState extends State<MyHomePage> implements OnStampListener {
   }
 }
 ```
+
+### Step 3: Set your SnowShoe API key
 
 When using the SnowShoeView, be sure to replace `YOUR_SNOWSHOE_API_KEY` with your actual SnowShoe API key.
 For more information please see the [SnowShoe docs](https://snowshoe.readme.io/v3.0/docs). 
