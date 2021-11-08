@@ -1,4 +1,4 @@
-SnowShoe Flutter SDK
+# SnowShoe Flutter SDK
 
 ## Features
 
@@ -81,4 +81,8 @@ class _MyHomePageState extends State<MyHomePage> implements OnStampListener {
 ### Step 3: Set your SnowShoe API key
 
 When using the SnowShoeView, be sure to replace `YOUR_SNOWSHOE_API_KEY` with your actual SnowShoe API key.
-For more information please see the [SnowShoe docs](https://snowshoe.readme.io/v3.0/docs). 
+For more information please see the [SnowShoe docs](https://snowshoe.readme.io/v3.0/docs).
+
+## Example App
+
+In order to test the example, you hav to run first 'flutter pub run build_runner build'.

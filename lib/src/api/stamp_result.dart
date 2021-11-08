@@ -10,14 +10,12 @@ part 'stamp_result.g.dart';
 class StampResult {
   SnowShoeError? error;
   SnowShoeStamp? stamp;
-  bool? secure;
   DateTime? created;
   String receipt;
 
   StampResult({
     required this.error,
     required this.stamp,
-    required this.secure,
     required this.created,
     required this.receipt
   });

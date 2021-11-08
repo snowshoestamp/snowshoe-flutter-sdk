@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:snowshoe_sdk_flutter/snowshoe_sdk_flutter.dart';
+import 'package:snowshoe_sdk_flutter/src/models/snow_shoe_result.dart';
 
 void main() {
   runApp(const MyApp());
@@ -52,26 +53,30 @@ class _MyHomePageState extends State<MyHomePage> implements OnStampListener {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
-    return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: SnowShoeView.secondary(
-          this,
-          "YOUR_SNOWSHOE_API_KEY"
-      )// This trailing comma makes auto-formatting nicer for build methods.
+    var snowShoeView = SnowShoeView.secondary(
+        this,
+        "YOUR_SNOWSHOE_API_KEY"
     );
+    snowShoeView.syncStampInfo();
+    var scaffold = Scaffold(
+        appBar: AppBar(
+          // Here we take the value from the MyHomePage object that was created by
+          // the App.build method, and use it to set our appbar title.
+          title: Text(widget.title),
+        ),
+        body: snowShoeView// This trailing comma makes auto-formatting nicer for build methods.
+    );
+    //snowShoeView.syncStampInfo();
+    return scaffold;
   }
 
   @override
-  void onStampRequestMade() {
-
-  }
-
-  @override
-  void onStampResult(StampResult? result) {
+  void onGetSerialResult(SnowShoeResult? result) {
     print(result?.toJson());
+  }
+
+  @override
+  void onSyncCompleted(bool result) {
+    print("Sync completed: $result");
   }
 }

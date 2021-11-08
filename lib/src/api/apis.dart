@@ -1,3 +1,4 @@
 class Apis {
-  static const String stamp = '/stamp';
+  static const String reportStamps = '/reportstamps';
+  static const String getStamps = '/getstamps';
 }

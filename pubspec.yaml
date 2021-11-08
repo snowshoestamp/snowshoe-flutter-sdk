@@ -1,6 +1,6 @@
 name: snowshoe_sdk_flutter
 description: SnowShoe flutter sdk.
-version: 3.0.0
+version: 3.1.1
 homepage: https://snowshoe.io
 
 environment:
@@ -13,8 +13,12 @@ dependencies:
   retrofit: ^2.0.1
   dio: ^4.0.0
   built_value: ^8.1.1
-  json_annotation: ^4.0.0
+  json_annotation: ^4.1.0
   logger: ^1.0.0
+  sqflite_sqlcipher: ^2.1.0
+  intl: ^0.17.0
+  uuid: 3.0.5
+  flutter_secure_storage: ^4.2.1
 
 dev_dependencies:
   flutter_test:
