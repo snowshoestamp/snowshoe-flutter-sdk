@@ -22,9 +22,9 @@ class SnowShoeMultiTouchGesture extends MultiTapGestureRecognizer {
   void removeTouch(int pointer, TapUpDetails details) {
     if (numberOfTouches == minNumberOfTouches) {
       onMultiTap(data);
-      data = <List<double>>[];
     }
 
+    data = <List<double>>[];
     numberOfTouches = 0;
   }
 
